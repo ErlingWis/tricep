@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "tricep.cli": {
+      "commandName": "Project",
+      "commandLineArgs": "ref --file modules/server_farms/server_farm.bicep --e dev prod --create-deployment-data ado",
+      "workingDirectory": "C:\\Users\\erlwis\\source\\repos\\dotnet-tricep\\tricep.cli\\monorepo"
+    }
+  }
+}
