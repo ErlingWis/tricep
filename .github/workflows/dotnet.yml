@@ -20,4 +20,4 @@ jobs:
     - name: Pack
       run: dotnet pack -p:PackageVersion=1.0.${{ github.run_number }}
     - name: Push
-      run: dotnet nuget push -K ${{ secrets.NUGET_API_KEY }}
+      run: dotnet nuget push -K ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
