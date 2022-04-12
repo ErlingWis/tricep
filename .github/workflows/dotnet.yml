@@ -18,6 +18,6 @@ jobs:
       with:
         dotnet-version: 6.x
     - name: Pack
-      run: dotnet pack -p:PackageVersion=1.0.${{ github.run_number }}
+      run: dotnet pack -c Release -p:PackageVersion=1.0.${{ github.run_number }} 
     - name: Push
-      run: dotnet nuget push -K ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+      run: dotnet nuget push  "**/*.nupkg" -k ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
