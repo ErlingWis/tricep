@@ -36,6 +36,12 @@ public class RefCommand : EnvironmentCommand, ICommand
                 continue;
             }
 
+            if(file.StartsWith(FileServiceBase.LiveDirectoryName))
+            {
+                live.Add(new BicepFile(target));
+                continue;
+            }
+
             foreach (var templateDomain in repo.Templates.Domains)
             {
                 foreach (var templateFile in templateDomain.Files)

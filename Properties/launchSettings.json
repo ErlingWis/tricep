@@ -2,8 +2,8 @@
   "profiles": {
     "tricep.cli": {
       "commandName": "Project",
-      "commandLineArgs": "ref --file modules/server_farms/server_farm.bicep --e dev prod --create-deployment-data ado",
-      "workingDirectory": "C:\\Users\\erlwis\\source\\repos\\dotnet-tricep\\tricep.cli\\monorepo"
+      "commandLineArgs": "ref -f live/mpn/fiksio/external_resources.bicep live/mpn/fiksio/internal_resources.bicep live/mpn/norkartapi/app_services.bicep live/mpn/norkartapi/config_stores.bicep live/mpn/surface/server_farms.bicep live/mpn/surface/sql_servers.bicep",
+      "workingDirectory": "C:\\Users\\erlwis\\source\\repos\\tricep"
     }
   }
 }
